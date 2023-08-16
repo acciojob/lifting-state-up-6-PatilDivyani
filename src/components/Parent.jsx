@@ -9,11 +9,18 @@ const ParentComponent = () => {
     { id: 3, text: "Deploy the React app", state: false },
    ])
 
+   const [task, setTask] = useState("")
+  console.log(task)
+
+
+
 
    return(
         <div>
             <h1>Parent Component</h1>
-            <ChildComponent todos={todos} />
+            <ChildComponent todos={todos} 
+              setTask = {setTask}
+            />
         </div>
    )
 

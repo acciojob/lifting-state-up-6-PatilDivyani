@@ -1,6 +1,7 @@
-import React from 'react'
-const ChildComponent = ({ todos }) => {
-
+import React, {useState} from 'react'
+const ChildComponent = ({ todos, setTask }) => {
+    // const [todoId, setTodoId] = useState("")
+    // console.log(todoId)
 
     return(
         <div>
@@ -11,7 +12,7 @@ const ChildComponent = ({ todos }) => {
                     <li>
                        
                         {todo.text}
-                        <button onClick={}>Complete</button>
+                        <button onClick={()=>setTask(todo)}>Complete</button>
                     </li>
                 ))}
             </ul>
